@@ -36,7 +36,7 @@ function onSubmitBtnRefClick(evt) {
     titleColor: '#FFFFFF',
     titleSize: '16px',
     titleLineHeight: '1.5',
-    iconUrl: './img/icon-check.svg',
+    iconUrl: '../img/icon-check.svg',
   };
 
   const errorOptions = {
@@ -50,7 +50,7 @@ function onSubmitBtnRefClick(evt) {
     titleColor: '#FFFFFF',
     titleSize: '16px',
     titleLineHeight: '1.5',
-    iconUrl: './img/icon-x-octagon.svg',
+    iconUrl: '../img/icon-x-octagon.svg',
   };
   const p = new Promise((resolve, reject) => {
     if (selectedField === 'fulfilled') {
