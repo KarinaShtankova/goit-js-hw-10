@@ -1,5 +1,3 @@
-
-
 .wrapper {
   display: flex;
   /* margin-left: 156px; */
@@ -42,7 +40,7 @@
 .btn {
   display: block;
   height: 40px;
-    min-width: 75px;
+  min-width: 75px;
   padding: 8px 16px;
 
   color: #ffffff;
@@ -99,62 +97,89 @@
   text-transform: uppercase;
 }
 
+/* flatpickr */
+
+/* body .flatpickr-calendar {
+  padding: 16px;
+  height: 352px;
+  width: 280px;
+}
+
+.flatpickr-months .flatpickr-prev-month.flatpickr-prev-month {
+  position: static;
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+}
+.flatpickr-months .flatpickr-next-month.flatpickr-next-month {
+  position: static;
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+}
+
+body .flatpickr-months {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+body .flatpickr-current-month {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+
+body .flatpickr-current-month .flatpickr-monthDropdown-months,
+body .flatpickr-current-month input.cur-year {
+  padding: 0px;
+  color: #333;
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+div .flatpickr-innerContainer {
+  width: 100%;
+}
+
+div .flatpickr-weekday {
+}
+
+.flatpickr-days > .dayContainer {
+  display: flex;
+  gap: 16px;
+}
+
+body .flatpickr-days .flatpickr-day {
+  max-width: 20px;
+  max-height: 24px;
+} */
+
+/* iziToast */
+
 div .iziToast > .iziToast-close {
   background: url(../img/icon-close.svg) no-repeat center;
 }
 
-/* .icon{
-  fill: #ffffff;
-} */
-
-/* 
-
-body .flatpickr-calendar{
-  padding: 16px;
-}
-
-.flatpickr-months .flatpickr-prev-month.flatpickr-prev-month{
-position: static;
-width: 16px;
-height: 16px;
-padding: 0px;
-}
- .flatpickr-months .flatpickr-next-month.flatpickr-next-month{
-  position: static;
-  width: 16px;
-    height: 16px;
-    padding: 0px;
-}
-
-body .flatpickr-months{
-display: flex;
-align-items: center;
-margin-bottom: 24px;
-}
-
-
-body .flatpickr-current-month{
-
+/* body div div .iziToast > .iziToast-body {
+  margin: 0px;
   padding: 0px;
   display: flex;
-  align-items: center;
-
 }
 
-body .flatpickr-current-month .flatpickr-monthDropdown-months,
-body .flatpickr-current-month input.cur-year{
-    padding: 0px;
-  color: #333;
-    text-align: center;
-  
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-}
+body div div .iziToast-alert {
+  position: relative;
+  padding: 0 0 0 10px;
+  height: auto;
+  min-height: 36px;
+  margin: 0 0 0 15px;
+  text-align: left;
 
-
-body .flatpickr-days .flatpickr-day{
-
-  width: 20px;
-  height: 24px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  gap: 8px;
 } */

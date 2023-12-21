@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let currentTime = Date.now();
-let userSelectedDate;
+let userSelectedDate = '';
 
 const btnRef = document.querySelector('.btn');
 const inputRef = document.querySelector('.input');
@@ -15,6 +15,7 @@ const minutesRef = document.querySelector('span[data-minutes]');
 const secondsRef = document.querySelector('span[data-seconds]');
 
 const errorOptions = {
+  class: 'iziToast-alert',
   title: 'Error',
   message: 'Please choose a date in the future',
   position: 'topRight',
@@ -25,19 +26,21 @@ const errorOptions = {
   titleColor: '#FFFFFF',
   titleSize: '16px',
   titleLineHeight: '1.5',
-  iconColor: '#FFFFFF',
-  icon: 'icon',
-  iconUrl: '/img/icon-x-octagon.svg',
+  iconUrl: './img/icon-x-octagon.svg',
 };
+const formatStr = 'l';
 
 const options = {
+  locale: {
+    firstDayOfWeek: 1,
+  },
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0];
-
     if (userSelectedDate.getTime() < currentTime) {
       iziToast.error(errorOptions);
 
@@ -52,10 +55,11 @@ const options = {
   },
 };
 
-const fp = flatpickr('#datetime-picker', options); // flatpickr
+const fp = flatpickr(inputRef, options); // flatpickr
 
-flatpickr.l10ns.default.firstDayOfWeek = 1; // Monday
-console.log(flatpickr.l10ns);
+inputRef.addEventListener('focus', () => {
+  fp.config.defaultDate = new Date();
+});
 
 btnRef.addEventListener('click', onbtnRefClick);
 
@@ -111,5 +115,3 @@ function convertMs(ms) {
 // console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
 // console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
 // console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
-
-flatpickr.l10ns.default.firstDayOfWeek = 1; // Monday

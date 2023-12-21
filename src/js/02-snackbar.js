@@ -1,6 +1,4 @@
-// Описаний у документації
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
 const submitBtnRef = document.querySelector('[type="submit"]');
@@ -30,34 +28,30 @@ function onSubmitBtnRefClick(evt) {
   const successOptions = {
     title: 'OK',
     message: `Fulfilled promise in ${delay}ms`,
+    position: 'topRight',
+    backgroundColor: '#59A10D',
+    messageColor: '#FFFFFF',
+    messageSize: '16px',
+    messageLineHeight: '1.5',
+    titleColor: '#FFFFFF',
+    titleSize: '16px',
+    titleLineHeight: '1.5',
+    iconUrl: './img/icon-check.svg',
   };
 
-    const errorOptions = {
-      
+  const errorOptions = {
     title: 'Error',
     message: `Rejected promise in ${delay} ms`,
-  position: 'topRight',
-  backgroundColor: '#EF4040',
-  messageColor: '#FFFFFF',
-  messageSize: '16px',
-  messageLineHeight: '1.5',
-  titleColor: '#FFFFFF',
-  titleSize: '16px',
-  titleLineHeight: '1.5',
-  iconColor: '#FFFFFF',
-  icon: 'icon',
-  iconUrl: '/img/icon-x-octagon.svg',
-
-
-
-
-
-
-
-
-
+    position: 'topRight',
+    backgroundColor: '#EF4040',
+    messageColor: '#FFFFFF',
+    messageSize: '16px',
+    messageLineHeight: '1.5',
+    titleColor: '#FFFFFF',
+    titleSize: '16px',
+    titleLineHeight: '1.5',
+    iconUrl: './img/icon-x-octagon.svg',
   };
-
   const p = new Promise((resolve, reject) => {
     if (selectedField === 'fulfilled') {
       resolve(`✅ Fulfilled promise in ${delay}ms`);
@@ -78,7 +72,3 @@ function onSubmitBtnRefClick(evt) {
     }, delay);
   });
 }
-
-// 1) cтилізвція згідно макету
-// 3) cтилізвція згідно макету календар
-// 4) понеділок початок тижня  
